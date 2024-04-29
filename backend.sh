@@ -81,7 +81,7 @@ VALIDATE $? "Instaling MySQL client"
 mysql -h database.vinaydevops.online -uroot -p${mysql_root_password} < /app/schema/backend.sql &>>$LOGFILE
 VALIDATE $? "Schema Loading"
 
-systemctl restart backend &>>$Loading
+systemctl restart backend &>>$LOGFILE
 VALIDATE $? "Restart backend"
 
 
